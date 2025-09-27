@@ -1,36 +1,43 @@
-# firefox Config
-advance preferences of firefox which can affect the performance of the browser
+# Firefox Advanced Configuration
 
-before everything else this configuration is purely based on the preferences of the user it highly depends what are the things are important and can be configure by yourself.Feel free to add something if there are things that i missed or forgot. 
+This repository provides a customizable `user.js` file for Firefox, containing advanced preferences that can affect browser performance and privacy.  
+**Note:** These settings reflect personal preferences—feel free to modify them to fit your needs.
 
-the user.js is the pre configured file that i created feel free to change it of your likings.
+## How to Use
 
-to use the file 
-1.Open Firefox.
+1. Open Firefox.
+2. Type `about:support` in the address bar and hit Enter.
+3. Scroll down to the **Profile Folder** section and click **Open Directory**.
+4. Copy the provided `user.js` file into this folder.
+5. Restart Firefox. The settings will be applied automatically.
 
-2.Type about:support in the address bar.
+> **Note:** If you change settings in `about:config`, they may be overridden by `user.js` the next time Firefox starts. To make permanent changes, edit your `user.js` file directly.
 
-3.Scroll down → find Profile Folder → click Open Directory.
+---
 
-4.paste the file user.js inside that folder.
+## Editing the `user.js` File
 
-5.Restart Firefox → all settings auto-apply.
+1. Locate `user.js` in your Firefox profile folder (see above for how to find it).
+2. Open it with your favorite text editor.
+3. Add or edit preferences using the following format:
+    ```js
+    user_pref("preference.name", value);
+    ```
+    Example:
+    ```js
+    user_pref("privacy.resistFingerprinting", true);
+    ```
+    - Values can be `true`, `false`, numbers, or strings (in quotes).
+4. Save the file and restart Firefox for changes to take effect.
 
-done....
+---
 
-PS 
+## Contributions
 
-If you edit something in about:config, it might get overridden by user.js next time Firefox starts.
-To tweak permanently, just edit your user.js file instead.
+Feel free to suggest or add new preferences!
 
-Now if you want to edit the file heres what you need to do.
+---
 
-1. Locate the file in the firefox folder usally named:user.js
-   you can also open firefox and go to about:support and find the profile folder and click that to quickly navigate to the file manager.
-2. Ones you find the file you can now edit with your favorite text editor.
-3. to edit follow this
-4. user_pref("preference.name", value); -this is the format.
-5. user_pref("privacy.resistFingerprinting", true); -like this example.
-   there are 2 types of variables which true/false,1-any value.
-6. if you're satisfied with the changes you can save the file.
-7. restart firefox then done.
+## Disclaimer
+
+Changing advanced Firefox settings can affect browser behavior and stability. Always back up your profile and settings before making changes.
