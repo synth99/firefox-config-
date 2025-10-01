@@ -14,6 +14,9 @@ user_pref("network.dns.disablePrefetch", true);
 // REDUCE LOOKUPS
 user_pref("network.prefetch-next", false);
 // SAVES BANDWIDTH&PREVENT TRACKING
+user_pref("browser.sessionstore.interval", 300000);
+// Saves session data less often → less disk writes.
+
 
 //  Privacy & Security
 
@@ -31,6 +34,10 @@ user_pref("dom.battery.enabled", false);
 //DISABLE BATTERY INFO
 user_pref("media.peerconnection.enabled", false);
 //DISABLE WEBRTC
+user_pref("network.cookie.lifetimePolicy", 2);
+// Auto-delete cookies when Firefox closes.
+user_pref("beacon.enabled", false);
+// Blocks background “beacon” tracking pings.
 
 // Personal Preferences
 
