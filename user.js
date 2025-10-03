@@ -16,6 +16,12 @@ user_pref("network.prefetch-next", false);
 // SAVES BANDWIDTH&PREVENT TRACKING
 user_pref("browser.sessionstore.interval", 300000);
 // Saves session data less often → less disk writes.
+user_pref("signon.rememberSignons", false);
+// Stops firefox asking for save passwords
+user_pref("clipboard.events.enabled", false");
+// Stop websites of messing your clipboard
+user_pref("network.http.referer.trimmingPolicy", 2);
+//Strips sensitive referrer data.
 
 
 //  Privacy & Security
